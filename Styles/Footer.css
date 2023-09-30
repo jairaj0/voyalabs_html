@@ -1,0 +1,84 @@
+footer{
+    align-items: flex-start !important;
+}
+
+footer h1{
+    font-size: 50px;
+    font-weight: 500;
+    width: 550px;
+}
+
+footer button{
+    background-color: var(--purple);
+    font-size: 25px;
+    color: var(--light);
+    padding: 1.5rem 5rem;
+    border: none;
+    border-radius: 3rem;
+    margin: 3rem 0;
+    transition: background .3s ease-in-out;
+}
+
+footer button:hover{
+    background-color: var(--purple-hover);
+}
+
+footer p{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+footer .mail{
+    color: var(--purple);
+    font-size: 25px;
+}
+
+footer .rights{
+    margin: 3rem 0;
+    font-size: 16px;
+}
+
+footer .rights a{
+    color: var(--dark);
+    margin-left: 1rem;
+    transition: opacity 1s ease-in-out;
+}
+
+footer .rights a:hover{
+    opacity: 0.5;
+}
+
+footer .social{
+    margin-left: 5rem;
+    width: 100%;
+}
+
+footer .social a{
+    text-decoration: underline;
+    font-size: 25px;
+    color: var(--dark);
+    margin-right: 3rem;
+    line-height: 5rem;
+    transition: opacity 1s ease-in-out;
+}
+
+footer .social a:hover{
+    opacity: 0.5;
+}
+
+footer .social-links{
+    width: 500px;
+}
+
+footer .animation_wrapper{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+footer .animation_wrapper img{
+    width: 200px;
+    height: 100%;
+    position: absolute;
+}

@@ -1,0 +1,43 @@
+.experts h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+.experts .profile{
+    width: 50%;
+    align-items: flex-start;
+}
+
+.experts .pic{
+    width: 70%;
+    height: 450px;
+}
+
+.experts img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.experts .info{
+    padding-left: 3rem;
+}
+
+.experts .icon{
+    width: 70px;
+}
+
+.experts h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.experts h3{
+    font-size: 30px;
+    font-weight: 300;
+    margin: 2rem 0;
+}
