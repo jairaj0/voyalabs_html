@@ -65,12 +65,43 @@ const themeChanger = () => {
   window.addEventListener('load' , themeChanger);
 
   const thumb = document.querySelector(".thumbnail");
-  // const video = document.querySelector(".video iframe");
   const video = document.querySelector(".video");
 
   thumb.addEventListener('click' , ()=> {
     video.innerHTML = `<iframe src="https://player.vimeo.com/video/764513434?color=ffffff&badge=0&title=0&byline=0&portrait=0&loop=1&autoplay=1&api=1" width="100%" height="100%" allow="autoplay" frameborder="0"></iframe>`
   })
 
+  const pics = document.querySelectorAll(".animation_wrapper img");
+  let animeData = [];
 
-
+  const play = (elem , _class) => elem.classList.add(_class);
+  const stop = (elem) => elem.classList.add('end');
+  const resume = (elem) => elem.classList.remove('end');
+  const reset = (elem , _class) => elem.classList.remove('end', _class);
+  
+  const stopHandler = (elem, i) => {
+      stop(elem);
+      elem.addEventListener("animationend", () => {
+          reset(elem , `move${i}`);
+          animeData[i] = null;
+      }, false);
+  }
+  
+  pics.forEach((ele, i) => {
+      ele.addEventListener('mouseenter', () => {
+          if (animeData[i] && animeData[i].startAnime) {
+              resume(ele);
+          } else {
+              animeData[i] = { startAnime: true };
+              play(ele , `move${i}`);
+          }
+      });
+  
+      ele.addEventListener('mouseleave', () => {
+          if (animeData[i] && animeData[i].startAnime) {
+              stopHandler(ele, i);
+          }
+      });
+  });
+  
+  
