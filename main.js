@@ -122,6 +122,9 @@ const responsive = () => {
   const feelOurVibe = document.querySelector(".feelOurVibe");
   const mission = document.querySelector(".mission");
   const feelTheReel = document.querySelector(".feelTheReel");
+  const experts = document.querySelector(".experts");
+  const footer = document.querySelector("footer");
+  const menuButton = document.querySelector(".menuButton");
 
   if (_innerWidth < 640) {
     hero.style.zoom = _innerWidth / 640;
@@ -130,6 +133,9 @@ const responsive = () => {
     feelOurVibe.style.zoom = (_innerWidth / 640) * 1.5;
     mission.style.zoom = (_innerWidth / 640) * 1.5;
     feelTheReel.style.zoom = (_innerWidth / 640) ;
+    experts.style.zoom = (_innerWidth / 640) * 1.6 ;
+    footer.style.zoom = (_innerWidth / 640) * 1.3 ;
+    menuButton.style.zoom = (_innerWidth / 640) * 1.3 ;
   } else if (_innerWidth < 900) {
     //  900 > case < 640
     nav.style.zoom = _innerWidth / 900;
@@ -139,6 +145,8 @@ const responsive = () => {
     feelOurVibe.style.zoom = (_innerWidth / 900) * 1.2;
     mission.style.zoom = _innerWidth / 900;
     feelTheReel.style.zoom = _innerWidth / 900;
+    experts.style.zoom = _innerWidth / 900;
+    footer.style.zoom = _innerWidth / 900;
   } else if (_innerWidth <= 1200) {
     //  1200 > case < 900
     nav.style.zoom = _innerWidth / 1200 + 0.3;
@@ -148,6 +156,8 @@ const responsive = () => {
     feelOurVibe.style.zoom = (_innerWidth / 1200) * 1.6;
     mission.style.zoom = (_innerWidth / 1200) * 1.4;
     feelTheReel.style.zoom = _innerWidth / 1200;
+    experts.style.zoom = _innerWidth / 1200 * 1.4;
+    footer.style.zoom = _innerWidth / 1200 * 1.3;
   } else if (_innerWidth <= 1400) {
     //  1400 > case < 1200
     nav.style.zoom = _innerWidth / 1400;
@@ -157,6 +167,8 @@ const responsive = () => {
     feelOurVibe.style.zoom = _innerWidth / 1400;
     mission.style.zoom = _innerWidth / 1400;
     feelTheReel.style.zoom = _innerWidth / 1400;
+    experts.style.zoom = _innerWidth / 1400;
+    footer.style.zoom = _innerWidth / 1400;
   } else {
     // over 1400 px
     nav.style.zoom = _innerWidth / 1400;
@@ -166,6 +178,8 @@ const responsive = () => {
     feelOurVibe.style.zoom = _innerWidth / 1400;
     mission.style.zoom = _innerWidth / 1400;
     feelTheReel.style.zoom = _innerWidth / 1400;
+    experts.style.zoom = _innerWidth / 1400;
+    footer.style.zoom = _innerWidth / 1400;
   }
 };
 

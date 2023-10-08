@@ -48,6 +48,17 @@ nav .navLinks button:hover {
 }
 
 
+.menuButton{
+    width: 80px;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+}
+
+
 /* ********** Responsive ************* */
 
 @media screen and (max-width : 1200px) {
@@ -61,5 +72,8 @@ nav .navLinks button:hover {
 @media screen and (max-width : 640px) {
     nav{
         display: none !important;
+    }
+    .menuButton{
+        display: block;
     }
 }
