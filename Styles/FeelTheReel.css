@@ -1,5 +1,6 @@
 .feelTheReel{
-    color: var(--dark);
+    width: 100%;
+    padding: 0 1.5rem;
 }
 
 .feelTheReel h1 {
@@ -14,26 +15,42 @@
     margin: 2rem 0;
 }
 
-.feelTheReel .video{
+.video{
     position: relative;
-    border-radius: 2rem;
-    height: 800px;
 }
 
-.feelTheReel .video .thumbnail{
-    background-image: url("../assets/thumbnail.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.video-added{
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
+    height: 0;
 }
 
-.feelTheReel .thumbnail img{
-    cursor: pointer;
-}
-
-.feelTheReel .video .thumbnail , .feelTheReel .video iframe{
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
     border-radius: 2rem;
     background-color: var(--dark);
+}
+
+
+.video img:last-child{
+    position: absolute;
+}
+
+.video img:first-child{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+
+
+/* ********** Responsive ************* */
+
+@media screen and (max-width : 640px) {
+    .feelTheReel{
+        margin-top: 5rem;
+    }
 }

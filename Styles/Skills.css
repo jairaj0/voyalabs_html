@@ -75,6 +75,9 @@
 }
 
 @media screen and (max-width: 640px) {
+    .skills{
+        margin-top: 5rem;
+    }
     .skills .boxes{
         grid-template-columns: 1fr;
     }
