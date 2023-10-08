@@ -46,3 +46,20 @@ nav .navLinks button {
 nav .navLinks button:hover {
     background-color: var(--purple-hover);
 }
+
+
+/* ********** Responsive ************* */
+
+@media screen and (max-width : 1200px) {
+    nav{
+        width: 95%;
+        padding: 0 30px;
+        border-radius: 2rem;
+    }
+}
+
+@media screen and (max-width : 640px) {
+    nav{
+        display: none !important;
+    }
+}

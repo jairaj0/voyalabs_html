@@ -64,44 +64,93 @@ const themeChanger = () => {
   window.addEventListener('scroll' , themeChanger);
   window.addEventListener('load' , themeChanger);
 
-  const thumb = document.querySelector(".thumbnail");
-  const video = document.querySelector(".video");
+//   const thumb = document.querySelector(".thumbnail");
+//   const video = document.querySelector(".video");
+// 
+//   thumb.addEventListener('click' , ()=> {
+//     video.innerHTML = `<iframe src="https://player.vimeo.com/video/764513434?color=ffffff&badge=0&title=0&byline=0&portrait=0&loop=1&autoplay=1&api=1" width="100%" height="100%" allow="autoplay" frameborder="0"></iframe>`
+//   })
+// 
+//   const pics = document.querySelectorAll(".animation_wrapper img");
+//   let animeData = [];
+// 
+//   const play = (elem , _class) => elem.classList.add(_class);
+//   const stop = (elem) => elem.classList.add('end');
+//   const resume = (elem) => elem.classList.remove('end');
+//   const reset = (elem , _class) => elem.classList.remove('end', _class);
+//   
+//   const stopHandler = (elem, i) => {
+//       stop(elem);
+//       elem.addEventListener("animationend", () => {
+//           reset(elem , `move${i}`);
+//           animeData[i] = null;
+//       }, false);
+//   }
+//   
+//   pics.forEach((ele, i) => {
+//       ele.addEventListener('mouseenter', () => {
+//           if (animeData[i] && animeData[i].startAnime) {
+//               resume(ele);
+//           } else {
+//               animeData[i] = { startAnime: true };
+//               play(ele , `move${i}`);
+//           }
+//       });
+//   
+//       ele.addEventListener('mouseleave', () => {
+//           if (animeData[i] && animeData[i].startAnime) {
+//               stopHandler(ele, i);
+//           }
+//       });
+//   });
+  
+  
 
-  thumb.addEventListener('click' , ()=> {
-    video.innerHTML = `<iframe src="https://player.vimeo.com/video/764513434?color=ffffff&badge=0&title=0&byline=0&portrait=0&loop=1&autoplay=1&api=1" width="100%" height="100%" allow="autoplay" frameborder="0"></iframe>`
-  })
+  // ******** Responsive ********
 
-  const pics = document.querySelectorAll(".animation_wrapper img");
-  let animeData = [];
+  const responsive = () => {
+    const _innerWidth = window.innerWidth;
+    const nav = document.querySelector("nav");
+    const hero = document.querySelector(".hero");
+    const partners = document.querySelector(".partners");
+    const skills = document.querySelector(".skills");
+    const feelOurVibe = document.querySelector(".feelOurVibe");
 
-  const play = (elem , _class) => elem.classList.add(_class);
-  const stop = (elem) => elem.classList.add('end');
-  const resume = (elem) => elem.classList.remove('end');
-  const reset = (elem , _class) => elem.classList.remove('end', _class);
-  
-  const stopHandler = (elem, i) => {
-      stop(elem);
-      elem.addEventListener("animationend", () => {
-          reset(elem , `move${i}`);
-          animeData[i] = null;
-      }, false);
-  }
-  
-  pics.forEach((ele, i) => {
-      ele.addEventListener('mouseenter', () => {
-          if (animeData[i] && animeData[i].startAnime) {
-              resume(ele);
-          } else {
-              animeData[i] = { startAnime: true };
-              play(ele , `move${i}`);
-          }
-      });
-  
-      ele.addEventListener('mouseleave', () => {
-          if (animeData[i] && animeData[i].startAnime) {
-              stopHandler(ele, i);
-          }
-      });
-  });
-  
-  
+    if (_innerWidth < 640) {
+        hero.style.zoom = _innerWidth / 640;
+        partners.style.zoom = _innerWidth / 640;
+        skills.style.zoom = (_innerWidth / 640) * 1.5;
+    } else if (_innerWidth < 900) {
+      //  900 > case < 640
+        nav.style.zoom = _innerWidth / 900;
+        hero.style.zoom = 1;
+        partners.style.zoom = 1;
+        skills.style.zoom = _innerWidth / 900;
+        feelOurVibe.style.zoom = _innerWidth / 900;
+    } else if (_innerWidth < 1200) {
+      //  1200 > case < 900
+        nav.style.zoom = (_innerWidth / 1200) + 0.3;
+        hero.style.zoom = (_innerWidth / 1200) * 1.4;
+        partners.style.zoom = (_innerWidth / 1200) * 1.4;
+        skills.style.zoom = (_innerWidth / 1200) * 1.4;
+        feelOurVibe.style.zoom = (_innerWidth / 1200) * 1.4;
+    } else if (_innerWidth <= 1400) {
+      //  1400 > case < 1200
+        nav.style.zoom = _innerWidth / 1400;
+        hero.style.zoom = (_innerWidth / 1400) - 0.1;
+        partners.style.zoom = (_innerWidth / 1400) - 0.1;
+        skills.style.zoom = (_innerWidth / 1400);
+        feelOurVibe.style.zoom = (_innerWidth / 1400);
+    } else {
+      // over 1400 px
+        nav.style.zoom = (_innerWidth / 1400);
+        hero.style.zoom = (_innerWidth / 1400) * 0.9;
+        partners.style.zoom = _innerWidth / 1400;
+        skills.style.zoom = _innerWidth / 1400;
+        feelOurVibe.style.zoom = _innerWidth / 1400;
+    }
+};
+
+ 
+  window.addEventListener('resize' , responsive)
+  window.addEventListener('load' , responsive)

@@ -15,7 +15,7 @@
     border-radius: 2rem;
     position: -webkit-sticky;
     position: sticky;
-    top: 20%;
+    top: 10rem;
 }
 
 .feelOurVibe .cards{
@@ -56,14 +56,14 @@
 }
 
 .cards .content h3{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     margin: 2rem 0;
 }
 
 .cards .content button{
-    width: 240px;
-    height: 240px;
+    min-width: 240px;
+    min-height: 240px;
     border-radius: 50%;
     background: none;
     color: var(--light);
@@ -86,3 +86,26 @@
     height: 100%;
     object-fit: contain;
 }
+
+
+/* ********** Responsive ************* */
+
+@media screen and (max-width : 1200px) {
+    .cards .card{
+        height: 100%;
+    }
+    .cards .content{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 2rem 3rem;
+    }
+
+    .cards .card .info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem 0;
+    }
+}
+
