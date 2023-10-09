@@ -113,20 +113,24 @@ pics.forEach((ele, i) => {
 
 // ******** Responsive ********
 
+const nav = document.querySelector("nav");
+const hero = document.querySelector(".hero");
+const partners = document.querySelector(".partners");
+const skills = document.querySelector(".skills");
+const feelOurVibe = document.querySelector(".feelOurVibe");
+const mission = document.querySelector(".mission");
+const feelTheReel = document.querySelector(".feelTheReel");
+const experts = document.querySelector(".experts");
+const footer = document.querySelector("footer");
+const menuButton = document.querySelector(".menuButton");
+
+const _cursor = document.querySelector(".cursor");
+
 const responsive = () => {
   const _innerWidth = window.innerWidth;
-  const nav = document.querySelector("nav");
-  const hero = document.querySelector(".hero");
-  const partners = document.querySelector(".partners");
-  const skills = document.querySelector(".skills");
-  const feelOurVibe = document.querySelector(".feelOurVibe");
-  const mission = document.querySelector(".mission");
-  const feelTheReel = document.querySelector(".feelTheReel");
-  const experts = document.querySelector(".experts");
-  const footer = document.querySelector("footer");
-  const menuButton = document.querySelector(".menuButton");
 
-  if (_innerWidth < 640) {
+  if (_innerWidth <= 640) {
+    nav.style.zoom = 1;
     hero.style.zoom = _innerWidth / 640;
     partners.style.zoom = _innerWidth / 640;
     skills.style.zoom = (_innerWidth / 640) * 1.5;
@@ -136,6 +140,8 @@ const responsive = () => {
     experts.style.zoom = (_innerWidth / 640) * 1.6 ;
     footer.style.zoom = (_innerWidth / 640) * 1.3 ;
     menuButton.style.zoom = (_innerWidth / 640) * 1.3 ;
+
+    _cursor.style.display = "none";
   } else if (_innerWidth < 900) {
     //  900 > case < 640
     nav.style.zoom = _innerWidth / 900;
@@ -180,8 +186,32 @@ const responsive = () => {
     feelTheReel.style.zoom = _innerWidth / 1400;
     experts.style.zoom = _innerWidth / 1400;
     footer.style.zoom = _innerWidth / 1400;
+
   }
 };
 
-window.addEventListener("resize", responsive);
+window.addEventListener("resize", ()=>{
+  responsive()
+  closeHandler()
+});
 window.addEventListener("load", responsive);
+
+
+const close = document.querySelector('.close');
+const closeWrapper = document.querySelector('.closeWrapper');
+
+const openHandler = () => {
+  nav.style.right = "0";
+  closeWrapper.style.display = "block";
+  document.documentElement.style.overflow = 'hidden';
+}
+
+const closeHandler = () => {
+  nav.style.right = "-100%";
+  closeWrapper.style.display = "none";
+  document.documentElement.style.overflow = 'auto';
+}
+
+close.addEventListener("click" , closeHandler)
+menuButton.addEventListener("click" , openHandler)
+closeWrapper.addEventListener("click" , closeHandler)
