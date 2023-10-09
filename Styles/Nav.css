@@ -89,7 +89,7 @@ nav .close{
     nav{
         position: fixed;
         border: none;
-        height: 100vh;
+        height: 100svh;
         min-height: 400px;
         width: 250px;
         top: 0;
