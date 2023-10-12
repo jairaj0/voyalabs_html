@@ -38,7 +38,7 @@ function animateCircles() {
     circle.style.top = y + "px";
 
     const len = circles.length * 2;
-    circle.style.scale = (len - index) / len;
+    circle.style.scale = ((len - index) / len) * window.innerWidth / 1400;
 
     circle.x = x;
     circle.y = y;
