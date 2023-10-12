@@ -1,3 +1,5 @@
+// Cursor
+
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 const svg = document.querySelector(".cursor img");
@@ -51,6 +53,8 @@ function animateCircles() {
 
 animateCircles();
 
+// Theme changer
+
 const themeChanger = () => {
   const offsets = document
     .getElementById("theme-changer")
@@ -62,7 +66,8 @@ const themeChanger = () => {
 window.addEventListener("scroll", themeChanger);
 window.addEventListener("load", themeChanger);
 
-// const thumb = document.querySelector(".thumbnail");
+// Video 
+
 const video = document.querySelector(".video");
 
 video.addEventListener("click", () => {
@@ -93,6 +98,8 @@ const stopHandler = (elem, i) => {
     false
   );
 };
+
+// Pics animation
 
 pics.forEach((ele, i) => {
   ele.addEventListener("mouseenter", () => {
@@ -196,6 +203,7 @@ window.addEventListener("resize", ()=>{
 });
 window.addEventListener("load", responsive);
 
+// Menubar
 
 const close = document.querySelector('.close');
 const closeWrapper = document.querySelector('.closeWrapper');
@@ -215,3 +223,28 @@ const closeHandler = () => {
 close.addEventListener("click" , closeHandler)
 menuButton.addEventListener("click" , openHandler)
 closeWrapper.addEventListener("click" , closeHandler)
+
+// onScroll animation
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show')
+    }else{
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+const hiddenElement = document.querySelectorAll("p");
+const hiddenElement1 = document.querySelectorAll("h1");
+const hiddenElement2 = document.querySelectorAll("h2");
+const hiddenElement3 = document.querySelectorAll("h3");
+const hiddenElement4 = document.querySelectorAll("a");
+const hiddenElement5 = document.querySelectorAll("button");
+hiddenElement.forEach((el)=>observer.observe(el));
+hiddenElement1.forEach((el)=>observer.observe(el));
+hiddenElement2.forEach((el)=>observer.observe(el));
+hiddenElement3.forEach((el)=>observer.observe(el));
+hiddenElement4.forEach((el)=>observer.observe(el));
+hiddenElement5.forEach((el)=>observer.observe(el));
