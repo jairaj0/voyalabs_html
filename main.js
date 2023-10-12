@@ -223,6 +223,10 @@ const closeHandler = () => {
 close.addEventListener("click" , closeHandler)
 menuButton.addEventListener("click" , openHandler)
 closeWrapper.addEventListener("click" , closeHandler)
+nav.querySelectorAll("*").forEach(ele => {
+  ele.addEventListener("click" , closeHandler)
+});
+
 
 // onScroll animation
 
