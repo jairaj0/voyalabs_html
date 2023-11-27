@@ -3,6 +3,7 @@
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 const svg = document.querySelector(".cursor img");
+var timer;
 
 svg.style.visibility = "hidden";
 
@@ -15,12 +16,14 @@ window.addEventListener("mousemove", function (e) {
   coords.x = e.clientX - 12;
   coords.y = e.clientY - 12;
 
+  clearTimeout(timer)
+
   svg.style.visibility = "hidden";
   circles.forEach(function (circle) {
     circle.style.display = "block";
   });
 
-  setTimeout(function () {
+  timer = setTimeout(function () {
     circles.forEach(function (circle) {
       circle.style.display = "none";
       svg.style.visibility = "visible";
@@ -252,3 +255,10 @@ hiddenElement2.forEach((el)=>observer.observe(el));
 hiddenElement3.forEach((el)=>observer.observe(el));
 hiddenElement4.forEach((el)=>observer.observe(el));
 hiddenElement5.forEach((el)=>observer.observe(el));
+
+// hiddenElement.forEach((el)=>el.classList.add("show"));
+// hiddenElement1.forEach((el)=>el.classList.add("show"));
+// hiddenElement2.forEach((el)=>el.classList.add("show"));
+// hiddenElement3.forEach((el)=>el.classList.add("show"));
+// hiddenElement4.forEach((el)=>el.classList.add("show"));
+// hiddenElement5.forEach((el)=>el.classList.add("show"));

@@ -1,13 +1,11 @@
-
-.cursor{
-    pointer-events: none;
-    position: fixed;
-    display: block;
-    border-radius: 0;
-    transform-origin: center center;
-    z-index: 99998;
-    mix-blend-mode: difference;
-    filter: url(#goo);
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  z-index: 99998;
+  mix-blend-mode: difference;
 }
 
 .cursor .circle {
@@ -18,7 +16,7 @@
   position: absolute;
 }
 
-.cursor .anim_cursor{
-    background: none;
-    transform: scale(1.3);
-}
+.cursor .anim_cursor {
+  background: none;
+  transform: scale(1.3);
+}/*# sourceMappingURL=Cursor.css.map */

@@ -1,0 +1,48 @@
+Asset Download link :- https://github.com/codeats/voyalabs/archive/refs/heads/main.zip
+
+lottie1 :- https://lottie.host/3867ffb7-04a5-493b-9782-20c3fdb86255/pGLEkVehTH.json
+lottie2 :- https://lottie.host/3f40d18a-6080-4d2c-9e53-c322973e323a/N2e2K1b1ch.json
+lottie3 :- https://lottie.host/881fab4c-620d-480d-9b79-9e3a8e80406b/A02aW2kYdD.json
+lottie4 :- https://lottie.host/3cad8c26-003e-4c9a-ae71-108fed043528/SfB7gG8Gw6.json
+lottie5 :- https://lottie.host/a993150c-8dae-48c9-8efa-5e2028f47ffa/wABLIPNiIo.json
+lottie6 :- https://lottie.host/134c55c2-d032-46d8-a2b7-65f5d48798cb/KUY2XIdf3d.json
+lottie7 :- https://lottie.host/bc5a78d5-c6a4-4869-afd0-22953cbea538/SK0B2AYfjY.json
+
+
+1 - Intro
+     Hello Dosto !, welcome to the Codeats . mai hoon jai rawat, or aaj humlog ek,
+     award winning website ko banayenge.Ji han maine is website ko choose kiya hai
+     awwward.com se. Chaliye ab dekhte hai is website me kya kya features hai.
+       
+2 - Project Review
+     1 - Custom Cursor
+     2 - Lottie animation
+     3 - On Scroll animation
+     4 - Sticky Cards
+     5 - Onscroll Theme Changer
+     6 - onmousemove animation
+     7 - Phone to ininite Resolution responsive
+       Chaliye ab website ko banana start krte hai 
+
+3 - Installation and Extension used
+     Mai is website ke liye, vs code use kr raha hoon , Isko install krna bohot hi
+     asan hai, Browser me search krna hai vs code , first link ko open krna hai,
+     yaha pr click krke download kr lena hai , yaha automatic OS ke regarding hi,
+     link milta hai jaise mera mac hai to mac show kr raha hai, agar apka windows 
+     hai to , windows show krega.
+       
+4 - Folder structure
+5 - Assets,Google fonts , Universal.css
+{Link to the index.html}
+6 - Add Custom Cursor
+7 - Navbar
+8 - Hero
+9 - Partners
+10 - Skills
+11 - FeelOurVibe
+12 - Mission
+13 - FeelTheReel
+14 - Experts
+15 - Footer
+16 - Animation
+17 - Outro

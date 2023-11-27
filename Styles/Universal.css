@@ -10,7 +10,6 @@
   --box4: #b58cf9;
 }
 
-
 *,
 body {
   margin: 0;
@@ -20,14 +19,14 @@ body {
   scroll-behavior: smooth;
 }
 
-.text * , .text{
-    font-family: "IBM Plex Mono", monospace;
+.text *, .text {
+  font-family: "IBM Plex Mono", monospace;
 }
 
-body{
-    background-color: var(--dark);
-    color: var(--dark);
-    transition: background .5s ease-in-out;
+body {
+  background-color: var(--dark);
+  color: var(--dark);
+  transition: background 0.5s ease-in-out;
 }
 
 .flex {
@@ -53,7 +52,7 @@ body{
   justify-content: space-around;
 }
 
-.container{
+.container {
   width: 95%;
   margin: 0 auto;
   margin-top: 10rem;
@@ -63,22 +62,21 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   outline: none;
   cursor: pointer;
 }
 
 /* animation */
-
-p , h1 , h2 , h3 , a , button{
+p, h1, h2, h3, a, button {
   transform: translateY(50%);
   opacity: 0;
   filter: blur(5px);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.show{
+.show {
   transform: translateY(0);
   opacity: 1;
   filter: blur(0);
-}
+}/*# sourceMappingURL=Universal.css.map */
