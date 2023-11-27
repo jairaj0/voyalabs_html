@@ -29,7 +29,7 @@ window.addEventListener("mousemove", function (e) {
       svg.style.visibility = "visible";
       svg.style.display = "block";
     });
-  }, 1000); // Adjust the delay as needed
+  }, 500);
 });
 
 function animateCircles() {
@@ -163,6 +163,8 @@ const responsive = () => {
     feelTheReel.style.zoom = _innerWidth / 900;
     experts.style.zoom = _innerWidth / 900;
     footer.style.zoom = _innerWidth / 900;
+
+    _cursor.style.display = "block";
   } else if (_innerWidth <= 1200) {
     //  1200 > case < 900
     nav.style.zoom = _innerWidth / 1200 + 0.3;
@@ -174,6 +176,8 @@ const responsive = () => {
     feelTheReel.style.zoom = _innerWidth / 1200;
     experts.style.zoom = _innerWidth / 1200 * 1.4;
     footer.style.zoom = _innerWidth / 1200 * 1.3;
+
+    _cursor.style.display = "block";
   } else if (_innerWidth <= 1400) {
     //  1400 > case < 1200
     nav.style.zoom = _innerWidth / 1400;
@@ -185,6 +189,8 @@ const responsive = () => {
     feelTheReel.style.zoom = _innerWidth / 1400;
     experts.style.zoom = _innerWidth / 1400;
     footer.style.zoom = _innerWidth / 1400;
+
+    _cursor.style.display = "block";
   } else {
     // over 1400 px
     nav.style.zoom = _innerWidth / 1400;
@@ -197,6 +203,7 @@ const responsive = () => {
     experts.style.zoom = _innerWidth / 1400;
     footer.style.zoom = _innerWidth / 1400;
 
+    _cursor.style.display = "block";
   }
 };
 
